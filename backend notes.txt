@@ -1,0 +1,54 @@
+
+                                                E-Crat server creation
+                                               `````````````````````````
+
+    1: Create package.json  - npm init -y                                           
+    2: Install some libraries - npm i express cors mongoose dotenv
+        
+         dotenv -  Environment variables are used to store sensitive information or configuration data which are retrieved 
+                   by the running app when needed.
+            Types 
+            `````
+            1: System Environment variables (System path)
+            2: User Environment variables (Admin)
+            3: Runtime/Process variables ( Application Running Process)
+
+    3: Create .env file
+    4: Create .gitignore file
+    5: Add node_modules and .env in .gitignore
+    6: create index.js
+    7: In index.js file,
+            => import express,cors,dotenv
+            => create an application using express
+            => use cors and express.json() in server application
+            => Define port number
+
+
+MONGODB Atlas configuration
+`````````````````````````````
+
+1: Copy connection string from Atlas and paste it into  .env file
+2: create a db folder in server and inside create a file name (connection.js)
+3: In connection.js file import mongoose
+4: get db  connection string from .env Files
+5: use mongoose to connect mongodb with node.js
+6: import connection.js in index.js file
+7: Create a model in server
+8: create a model/collection to store products in model folder
+9: express model
+10: Create a router for client request - create a routes folder and  inside it create a router.js
+
+        => Inside router.js file, import express        
+        => Using express create an object for router class in-order to setup the path
+        => Resolve client request in various server routes  
+        => export router
+        
+11: Create controller folder inorder to define logic to resolve client request
+        => controller(folder)
+          - > productController.js
+          - > cartController.js
+          - > wishlistController.js
+
+        => Inside productController file
+          - > import product collection
+          - > Define logic to resolve client request
